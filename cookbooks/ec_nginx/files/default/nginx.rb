@@ -3,6 +3,6 @@ Ohai.plugin(:Nginx) do
 
   collect_data :default do
     nginx(Mash.new)
-    nginx[:version] = shell_out('nginx --version').stdout
+    nginx[:version] = shell_out('nginx -v').stderr
   end
 end

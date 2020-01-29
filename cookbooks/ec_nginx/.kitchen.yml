@@ -22,6 +22,7 @@ suites:
  - name: default
    run_list:
      - recipe[ec_nginx::default]
+     - recipe[ec_nginx::ohai]
    verifier:
      inspect_tests:
        - test/integration/default
