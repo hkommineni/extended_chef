@@ -1,10 +1,12 @@
-Debugging With Chef-Shell
+Debugging With Chef-Shell:
+
 	[node]> chef-shell
 	shell_out('nginx --version')
 	command = Mixlib::ShellOut.new('nginx --version')
 	command.run_command
 	
-Loading and Reloading Ohai
+Loading and Reloading Ohai:
+
 	berks upload (to upload the cookbook to chef server)
 	knife node run_list set web-node1 'recipe[ec_nginx::default],recipe[ec_nginx::ohai]'
 		- is to run the recipes on nodes from workstation
